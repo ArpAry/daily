@@ -16,24 +16,22 @@ public class EqualandNotEqual {
 		
 		for(i=0;i<n;i++)
 		{
-			m=0;
-			for(i=0;i<n;i++)
-			{
-				m=0;
+		
+		       m=0;
 				for(j=0;j<str[i].length();j++) {
 					if(str[i].charAt(j)=='N')
 					{
 						m++;
 					}
 				}
-				if(m>1||m==0)
-					System.out.println("YES");
-				else
+				if(m==1)
 					System.out.println("NO");
+				else
+					System.out.println("YES");
 				
-			}
+			
 				
-			}
+	     }
 		
 		
 	}
