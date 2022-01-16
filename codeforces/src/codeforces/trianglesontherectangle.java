@@ -8,13 +8,9 @@ public class trianglesontherectangle {
 		Scanner in=new Scanner (System.in);
 		int n=in.nextInt();
 		int ar[][]=new int[n][2];
-		int sol[]=new int[n];
+		long ans;
 		int i,j;
-		int lh=0
-		,uh=0
-		,l=0
-		,r=0
-		;
+		long lh=0,uh=0,l=0,r=0;
 		for(i=0;i<n;i++)
 		{
 			ar[i][0]=in.nextInt();
@@ -56,31 +52,27 @@ public class trianglesontherectangle {
 			}
 			r=ri[d-1]-ri[0];
 			r=r*ar[i][0];
-			if(lh>uh&&lh>l&&lh>r)
+			if(lh>=uh&&lh>=l&&lh>=r)
 			{
-				sol[i]=lh;
-			//ystem.out.println(lh);
+				ans=lh;
 			}
-			else 	if(uh>=	lh&&uh>l&&uh>r)
+			else 	if(uh>=lh&&uh>=l&&uh>=r)
 			{
-				sol[i]=uh;
-		//System.out.println(uh);
+				ans=uh;
 			}
-			else 	if(l>uh&&l>lh&&l>=r)
+			else 	if(l>=uh&&l>=lh&&l>=r)
 			{
-				sol[i]=l;
-	//	System.out.println(l);
+				ans=l;
 			}
 			else {
-				sol[i]=r;
-	//	System.out.println(r);
+				ans=r;
 			}
-	//System.out.printf("%d %d %d %d ",a,b,c,d);
-		}
-		for(i=0;i<n;i++)
-		{
-			System.out.println(sol[i]);
-		}
+			System.out.println(ans);
+	}
+//		for(i=0;i<n;i++)
+//		{
+//			System.out.println(sol[i]);
+//		}
 //ystem.out.printf("%d %d %d %d ",lh,uh,l,r);
 	}
 	
