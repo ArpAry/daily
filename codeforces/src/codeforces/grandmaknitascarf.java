@@ -28,9 +28,8 @@ public class grandmaknitascarf {
 					num++;
 				}
 			}
-			long ans=100000007;
+			long ans=10000007;
 			long count=0;
-			long value=0;
 			for(int i=0;i<num;i++)
 			{
 				int low=0,high=len-1;
@@ -60,12 +59,14 @@ public class grandmaknitascarf {
 						break;
 					}
 				}
-				//System.out.println(count);
-				value=Math.min(ans,count);
+				System.out.println(count);
+				ans=Math.min(ans,count);
 		}
-			ans=Math.min(ans,count);
-			if(count==ans)
+			//ans=Math.min(ans,count);
+			if(count==ans&&ans!=0)
 			System.out.println(-1);
+			else if(count==ans&&ans==0)
+				System.out.println(0);
 			else
 			System.out.println(ans);
 	t--;
