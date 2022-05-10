@@ -12,7 +12,7 @@ public class subtractopreation {
 			int ar[]=new int[n];
 			for(int i=0;i<n;i++)
 			ar[i]=in.nextInt();
-			Arrays.sort(ar);
+			
 			
 			//for(int i=0;i<n;i++)
 		 System.out.println("case "+t);
@@ -20,50 +20,53 @@ public class subtractopreation {
 			while(i<j)
 			{
 			//	System.out.println(ar[i]+"Hello");
-				if(ar[i]>0)
-				{
-					System.out.println(ar[j]-ar[i]);
-				if((ar[j]-ar[i])<k)
-				{
-					i++;
-				}
-				else if((ar[j]-ar[i])>k)
-				{
-					j--;
-				}
-				else if((ar[j]-ar[i])==k)
-				{
-					count=1;
-					System.out.println("Yes");
-					break;
-				}
-				}
-				else
-				{
-					System.out.println(ar[j]-ar[i]);
-					if((ar[i]-ar[j])<k)
-					{
-						i++;
-					}
-					else if((ar[i]-ar[j])>k)
-					{
-						j--;
-					}
-					else 
-					{
-						count=1;
-						System.out.println("Yes");
-						break;
-					}
-					
-				}
+			
+					//System.out.println(ar[j]-ar[i]);
+				Arrays.sort(ar);
+//				if(ar[0]>0)
+//				{
+//					System.out.println("ar[0]>0");
+//				if((ar[j]-ar[i])<k)
+//				{
+//					i++;
+//				}
+//				else if((ar[j]-ar[i])>k)
+//				{
+//					j--;
+//				}
+//				 if((ar[j]-ar[i])==k)
+//				{
+//					count=1;
+//					System.out.println("Yes");
+//					break;
+//				}
+//				}
+//				 if(ar[0]<0)
+//				 {
+//					 System.out.println("ar[0]<0");
+//					 if((ar[j]-ar[i])<k)
+//						{
+//							j--;
+//						}
+//						else if((ar[j]-ar[i])>k)
+//						{
+//							i++;
+//						}
+//						 if((ar[j]-ar[i])==k)
+//						{
+//							count=1;
+//							System.out.println("Yes");
+//							break;
+//						}
+//						 System.out.println(ar[j]-ar[i]);	 
+//				 }
 			}
 			if(count==0)
 			{
 				System.out.println("No");
 			}
 			t--;
-		}
+			}
 	}
 	
 }
