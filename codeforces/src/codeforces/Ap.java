@@ -1,4 +1,4 @@
-package codeforces;
+//package codeforces;
 import java.util.*;
 
 public class makeAp {

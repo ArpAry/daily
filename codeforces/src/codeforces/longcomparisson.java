@@ -6,84 +6,44 @@ public class longcomparisson {
 	{
 		
 		Scanner in=new Scanner(System.in);
-		long a=1,b=1,c=1,d=1,c1=0,c2=0;
-		double sum1,sum2;
-		int i,j=0;
-		int n=in.nextInt();
-		long ar[][]=new long[n][4];
-		for(i=0;i<n;i++)
+		int t=in.nextInt();
+		while(t>0)
 		{
-			for(j=0;j<4;j++)
+			long x1=0,x2=0;
+			int p1=0,p2=0;
+			 x1=in.nextLong();
+			 p1=in.nextInt();
+			 x2=in.nextLong();
+			 p2=in.nextInt();
+			int min=Math.min(p1,p2);
+			p1-=min;
+			p2-=min;
+			if(p1>7)
 			{
-				ar[i][j]=in.nextLong();
-				//System.out.println(ar[i][j]);
+				System.out.println(">");
 			}
+			else if(p2>7)
+			{
+				System.out.println("<");
+			}
+			else
+			{
+				x1=x1*(int)Math.pow(10,p1);
+				x2=x2*(int)Math.pow(10,p2);
+				if(x1>x2)
+					System.out.println(">");
+				else if(x1<x2)
+					System.out.println("<");
+				else
+					System.out.println("=");
+			}
+		//	System.out.println(x1+" "+p1+" "+x2+" "+p2+" ");
+			t--;
 		}
-		
-		for(i=0;i<n;i++)
-		{
-		
-					j=0;
-					a=ar[i][j];
-					while(a/10!=0)
-					{
-						a=a/10;
-						c1++;
-					}
-					j++;
-					b=ar[i][j];
-					j++;
-					c=ar[i][j];
-					while(c/10!=0)
-					{
-						c=c/10;
-						c2++;
-					}
-					j++;
-					d=ar[i][j];
-				//	System.out.println(a+"\n" +b+"\n" +c +"\n"+d );
-					if(c1+b>c2+c)
-					{
-						System.out.println(">");	
-					}
-				    else if(c1+b<c2+c)
-					{
-						System.out.println("<");
-		            }
-					else 
-					{
-							sum1=ar[i][0];
-							sum2=ar[i][2];
-							
-							double res1 =sum1/Math.pow(10,c1-1);
-							double res2=sum2/Math.pow(10,c2-1);
-						while(res1!=res2)
-						{
-							c1--;
-							c2--;
-						
-							if(res1>res2&&b<d)
-						{
-							System.out.println(">");
-							break;
-					    }
-						else if(res1<res2&&b>d)
-						{
-							System.out.println("<");
-							break;
-						}
-						else if(c1==0||c2==0)
-						{
-							System.out.println("=");
-							break;
-						}
-						
-					}	
-					}		
-			       
-		}
+
 	}
-	}
+	
+}
 	
 	
 	

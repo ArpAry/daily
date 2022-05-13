@@ -12,12 +12,17 @@ public class ABC_sort {
 			for(int i=0;i<n;i++) {
 				ar[i]=in.nextInt();
 			}
-			if((n&1)==1)
+			if(n==1)
 			{
-				
+			    System.out.println("YES");
+			    continue;
 			}
-			else {
-				for(int i=1;i<n;i+=2)
+			int j=0;
+			if((n&1)==1)
+		        j=1;
+			else 
+			j=0;
+				for(int i=j;i<n-1;i+=2)
 				{
 					if(ar[i]>ar[i+1])
 					{
@@ -26,8 +31,7 @@ public class ABC_sort {
 						ar[i+1]=b;
 					}
 				}
-				
-			}
+			
 			int count=0;
 			for(int i=0;i<n-1;i++)
 			{

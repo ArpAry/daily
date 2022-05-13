@@ -1,3 +1,4 @@
+package codeforces;
 import java.util.*;
 public class atranslation {
 
