@@ -7,25 +7,32 @@ public class Avtobus {
 		int t=in.nextInt();
 		while(t>0)
 		{
-			long n=in.nextLong(),m=n,min=0,max=0;
+			long n=in.nextLong();
+			n/=2;
+			long m=n,min=0,max=0;
 			//System.out.print(n);
-			if(n%4==0||n%6==0||n%10==0)
+			if(n%2!=0||n==2)
 			{
-			 min=(n/6);
-				n=n%6;
-				min+=n/4;
-				System.out.print(min+" ");
+				System.out.println("-1");
 			}
-			 if(m%4==0||m%6==0||m%10==0)
+			else
 			{
-				max=m/4;
-				m=m%4;
-				max+=m%6;
-				System.out.printf("%d\n",max);
+				if(m%3==2||m%3==2)
+				{
+					min=(m/3)+1;
+				}
+				else {
+					min=m/3;
+				}
+				
+				max=n/2;
+				
+				System.out.println(min+" "+max);
+				
 			}
 			
-			else
-				System.out.println(-1);
+//			else
+//				System.out.println(-1);
 			
 			t--;
 		}
