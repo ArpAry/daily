@@ -19,7 +19,8 @@ public class Everything {
 			for(int j=0;j<n;j++)
 			{
 				if((sum-ar[j])==(n-1)*ar[j])
-				{
+				{arrays
+					
 					count=1;
 					System.out.println("Yes");
 					break;
