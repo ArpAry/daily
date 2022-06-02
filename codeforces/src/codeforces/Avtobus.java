@@ -8,31 +8,19 @@ public class Avtobus {
 		while(t>0)
 		{
 			long n=in.nextLong();
-			n/=2;
-			long m=n,min=0,max=0;
-			//System.out.print(n);
-			if(n%2!=0||n==2)
-			{
-				System.out.println("-1");
-			}
+			if(n<4||(n&1)!=0)
+				System.out.println(-1);
 			else
 			{
-				if(m%3==2||m%3==2)
-				{
-					min=(m/3)+1;
-				}
-				else {
-					min=m/3;
-				}
+				n/=2;
 				
-				max=n/2;
+				if((n%3)==0)
+					System.out.println(n/3);
+				else 
+					System.out.println(n/3+1);
 				
-				System.out.println(min+" "+max);
-				
+				System.out.println(n/2);
 			}
-			
-//			else
-//				System.out.println(-1);
 			
 			t--;
 		}
