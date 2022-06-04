@@ -4,28 +4,26 @@ public class DigitMinimization {
 	public static void main(String []args )
 	{
 		Scanner in=new Scanner(System.in);
-		int t=in.nextInt();
-		in.nextLine();
+		int t=in.nextInt(),min=11;
 		while(t>0)
 		{
-				String s=in.nextLine();
-				//in.nextLine();
-				//int n2=in.nextInt();
-				if(s.length()==2)
-					System.out.println(s.charAt(1));
-				else
-				{ 
-					int min=-1;
-					for(int i=0;i<(s.length());i++)
+				int n=in.nextInt();
+				min=11;
+				if(n/100==0)
+				{
+					n=n%10;
+					System.out.println(n);
+				}
+				else {
+					while(n!=0)
 					{
-						if(s.charAt(i)>s.charAt(i+1))
-						{
-							min=i+1;
-						}
+						min=Math.min(min,n%10);
+						n=n/10;
 						
 					}
 					System.out.println(min);
 				}
+				
 							t--;
 		}
 	}}
