@@ -52,6 +52,8 @@ public class ConsecutivePointesSegment {
 					count=gap;
 					break;
 				}			
+				
+				
 			}
 			if(count<=1)
 				System.out.println("YES");

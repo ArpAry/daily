@@ -12,6 +12,9 @@ public class DigitMinimization {
 				if(n/100==0)
 				{
 					n=n%10;
+					
+					
+					
 					System.out.println(n);
 				}
 				else {
