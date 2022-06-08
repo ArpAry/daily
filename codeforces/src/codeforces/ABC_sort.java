@@ -9,7 +9,8 @@ public class ABC_sort {
 		{
 			int n=in.nextInt();
 			int ar[]=new int[n];
-			for(int i=0;i<n;i++) {
+			for(int i=0;i<n;i++)
+			{
 				ar[i]=in.nextInt();
 			}
 			if(n==1)
@@ -18,7 +19,7 @@ public class ABC_sort {
 			    continue;
 			}
 			int j=0;
-			if((n&1)==1)
+			if((n&1)==1&&n!=1)
 		        j=1;
 			else 
 			j=0;
