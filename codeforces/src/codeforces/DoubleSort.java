@@ -1,24 +1,42 @@
 package codeforces;
 import java.util.*;
 public class DoubleSort {
-	static void bubble(int ar[])
-	{
-		int n=ar.length;
-		for(int i=0;i<(n-1);i++)
-		{
-			for(int j=0;j<(n-1-i);j++)
-			{
-				if(ar[j]>ar[j+1])
-				{
-					ar[j]=ar[j]^ar[j+1];
-					ar[j+1]=ar[j]^ar[j+1];
-					ar[j]=ar[j]^ar[j+1];
-				}
-			}
-			
-		}
-	//	return ar;
-	}
+//	static int [] bubble(int ar[],int b[])
+//	{
+////	
+////		if(ar[2]==2&&ar.length>2)
+////		{
+////			System.out.println("2nd array");
+////		}
+////		else
+////			System.out.println("fitrst array");
+//		int n=ar.length;
+//		int c1[]=new int[n*n];
+//		for(int i=0;i<(n-1);i++)
+//		{
+//			for(int j=0;j<(n-1-i);j++)
+//			{
+//				if(ar[i]>ar[j]&&b[i]<b[j]||ar[i]<ar[j]&&b[i]>b[j])
+//				{
+//					c1[0]=-1;
+//					return c1;
+//				}
+//				if(ar[j]>ar[j+1]&&b[j]>b[j+1])
+//				{
+//					ar[j]=ar[j]^ar[j+1];
+//					ar[j+1]=ar[j]^ar[j+1];
+//					ar[j]=ar[j]^ar[j+1];
+//					b[j]=b[j]^b[j+1];
+//					b[j+1]=b[j]^b[j+1];
+//					b[j]=b[j]^b[j+1];
+//					System.out.println(i+" "+j);
+//				}
+//				
+//			}
+//			
+//		}
+//	//	return ar;
+//	}
 	public static void main(String [] args)
 	{
 		Scanner in=new Scanner(System.in);
@@ -43,9 +61,31 @@ public class DoubleSort {
 				b1[i]=in.nextInt();
 				b2[i]=b1[i];
 			}
-							
-			bubble(a1);
-			bubble(b1);
+			int c1[]=new int[n*n];
+			for(int i=0;i<(n-1);i++)
+			{
+				for(int j=0;j<(n-1-i);j++)
+				{
+					if(ar[i]>ar[j]&&b[i]<b[j]||ar[i]<ar[j]&&b[i]>b[j])
+					{
+						c1[0]=-1;
+						return c1;
+					}
+					if(ar[j]>ar[j+1]&&b[j]>b[j+1])
+					{
+						ar[j]=ar[j]^ar[j+1];
+						ar[j+1]=ar[j]^ar[j+1];
+						ar[j]=ar[j]^ar[j+1];
+						b[j]=b[j]^b[j+1];
+						b[j+1]=b[j]^b[j+1];
+						b[j]=b[j]^b[j+1];
+						System.out.println(i+" "+j);
+					}
+					
+				}
+				
+			}
+			//bubble(b1);
 			int count=0,k=0,z=0;
 			for(int i=0;i<n;i++)
 			{
@@ -85,7 +125,7 @@ public class DoubleSort {
 				for(int i=0;i<k;i++)
 				{
 	//				System.out.println(a1[i]+" "+a2[i]+" "+b1[i]+" "+b2[i]);
-			System.out.println(c1[i]+" "+c2[i]);
+		//	System.out.println(c1[i]+" "+c2[i]);
 				}
 			}
 							t--;

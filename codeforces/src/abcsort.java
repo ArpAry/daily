@@ -37,14 +37,6 @@ public class abcsort {
 			}
 			if(count==0)
 				System.out.println("YES");
-				
-			
-			
-			
 		}
-			
-		
-		
 	}
-
 }
